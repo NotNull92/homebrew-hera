@@ -1,26 +1,26 @@
 class Hera < Formula
   desc "Low-token CLI that lets AI coding agents inspect and control a live Godot editor"
   homepage "https://github.com/NotNull92/hera-agent-godot"
-  version "0.8.0"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.8.0/hera-darwin-arm64.tar.gz"
-      sha256 "a8d7fb0c941defe0030dbd2169bab714c43cb2fc0e7c11dc77ae92c8212e64ea"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.9.0/hera-darwin-arm64.tar.gz"
+      sha256 "b3d9e8d729da28ec0acbcf0fd1770d8c338f240c49e0cc0eb422928b6f6ed26e"
     else
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.8.0/hera-darwin-amd64.tar.gz"
-      sha256 "e9fe768bce5a636e2232a88a4f8584b6fe5eb74cba11e5dd8ea7d4c461092e1c"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.9.0/hera-darwin-amd64.tar.gz"
+      sha256 "48e9186a3e688da73b51772d0ce37a5f034203f09cacf30c6ec45b374b6a9734"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.8.0/hera-linux-arm64.tar.gz"
-      sha256 "5db7e99838e4fcc6bb68c54db090517ab0dd8098ccbaf6b1f7558046d9068bde"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.9.0/hera-linux-arm64.tar.gz"
+      sha256 "06679b0fda57475e4c2baf609716c75562b70af31e599ba2b9f580631e6cff3f"
     else
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.8.0/hera-linux-amd64.tar.gz"
-      sha256 "5f857d872049964fe66305fe167cdf7aaa955451867cfd682ad18f7d21d87d4a"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v0.9.0/hera-linux-amd64.tar.gz"
+      sha256 "6f90533f687d2aa6b5bee797f16012791003fde1fb67accd3d334bafa76a38d9"
     end
   end
 
@@ -30,6 +30,6 @@ class Hera < Formula
   end
 
   test do
-    assert_match "v0.8.0", shell_output("#{bin}/hera version")
+    assert_match "v0.9.0", shell_output("#{bin}/hera version")
   end
 end
