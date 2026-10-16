@@ -1,26 +1,26 @@
 class Hera < Formula
   desc "Low-token CLI that lets AI coding agents inspect and control a live Godot editor"
   homepage "https://github.com/NotNull92/hera-agent-godot"
-  version "2.0.1"
+  version "2.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.1/hera-darwin-arm64.tar.gz"
-      sha256 "f5798b397305e658a7f44cce8f651d0dcee4af83455dfba1bdda95bdb0dd6fc6"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.2/hera-darwin-arm64.tar.gz"
+      sha256 "820a7bf28f9cec901256ae4591edd2b94fa3a1a01ee3b99c1c1b002c5e5c9be4"
     else
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.1/hera-darwin-amd64.tar.gz"
-      sha256 "dbeb7e409ffc99b42d2e8e2271f6eebdc2a47643949c87e51681f43c8aed4414"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.2/hera-darwin-amd64.tar.gz"
+      sha256 "772c209d18f05fbe919ffc737964e3a2b5c5e0edabfc0771fe1233614c1e8423"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.1/hera-linux-arm64.tar.gz"
-      sha256 "50cb806b98bf03802f93e3233d4bb60af75d754995dba4f3f3b13882fdd29847"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.2/hera-linux-arm64.tar.gz"
+      sha256 "31c01222305243eac218dfb10e78dd716952a9b9c2805f2fac8a37ac3665937e"
     else
-      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.1/hera-linux-amd64.tar.gz"
-      sha256 "d74683ff84df61a55e557a8056bca1d2f73c325c87a01307de11fd3891288e97"
+      url "https://github.com/NotNull92/hera-agent-godot/releases/download/v2.0.2/hera-linux-amd64.tar.gz"
+      sha256 "689b38a880089f29877c7459452964daf4a9101b707ca5e5018d3ab13b9589cb"
     end
   end
 
@@ -34,6 +34,6 @@ class Hera < Formula
   end
 
   test do
-    assert_match "v2.0.1", shell_output("#{bin}/hera-godot version")
+    assert_match "v2.0.2", shell_output("#{bin}/hera-godot version")
   end
 end
